@@ -10,17 +10,17 @@ const theme = createTheme({
     mode: "light",
     primary: {
       main: Colors.primary,
-      light: Colors.primary,
+      light: Colors.light,
       dark: Colors.primary,
     },
     secondary: {
       main: Colors.secondary,
-      light: Colors.secondary,
+      light: Colors.light,
       dark: Colors.secondary,
     },
   },
-  typography: typography,
   shadows: shadows,
+  typography: typography,
 })
 
 export default theme

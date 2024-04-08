@@ -34,14 +34,16 @@ export default function LoginPage({}: Props) {
         }}
       >
         <Box position="relative">
-          <Box px={3}>
-            <Image
-                  src={"/images/logos/dark-logo.svg"}
-                  alt="logo"
-                  height={40}
-                  width={174}
-                  priority
-              />
+          <Box px={4} py={4}>
+            <Link href='/'>
+              <Image
+                    src={"/images/logos/NextStoreLogo.svg"}
+                    alt="logo"
+                    height={40}
+                    width={174}
+                    priority
+                />
+            </Link>
           </Box>
           <Box
             alignItems="center"
@@ -78,27 +80,27 @@ export default function LoginPage({}: Props) {
       >
         <Box p={4}>
           <AuthLogin
-            title="Welcome to Modernize"
+            title="Login"
             subtext={
-              <Typography variant="subtitle1" color="textSecondary" mb={1}>
-                Your Admin Dashboard
+              <Typography variant="h1" color="textSecondary" mb={1} fontSize={16}>
+                To Your Dashboard
               </Typography>
             }
             subtitle={
               <Stack direction="row" spacing={1} mt={3}>
-                <Typography color="textSecondary" variant="h6" fontWeight="500">
-                  New to Modernize?
+                <Typography color="textSecondary" variant="h1" fontSize={14} lineHeight='20px'>
+                  Dont have an account ?
                 </Typography>
                 <Typography
                   component={Link}
-                  href="/auth/auth1/register"
+                  href="/register"
                   fontWeight="500"
                   sx={{
                     textDecoration: 'none',
                     color: 'primary.main',
                   }}
                 >
-                  Create an account
+                  Register
                 </Typography>
               </Stack>
             }

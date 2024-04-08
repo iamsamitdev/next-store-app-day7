@@ -3,6 +3,7 @@
 import { AppBar, Box, Button, IconButton, Container, Theme, Toolbar, styled, useMediaQuery } from '@mui/material'
 import { MenuOutlined as MenuIcon } from '@mui/icons-material'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
 
@@ -26,7 +27,7 @@ export default function Header() {
   // Button Styling
   const ButtonStyled = styled(Button)(({ theme }) => ({
     fontSize: '16px',
-    color: theme.palette.text.secondary
+    color: theme.palette.text.secondary,
   }))
 
   // Breakpoints
@@ -37,13 +38,15 @@ export default function Header() {
     <AppBarStyled position='sticky' elevation={8}>
         <Container maxWidth='lg'>
             <ToolbarStyled>
-                <Image
-                    src={"/images/logos/dark-logo.svg"}
-                    alt="logo"
-                    height={40}
-                    width={174}
-                    priority
-                />
+                <Link href='/'>
+                    <Image
+                        src={"/images/logos/NextStoreLogo.svg"}
+                        alt="logo"
+                        height={40}
+                        width={174}
+                        priority
+                    />
+                </Link>
                 <Box flexGrow={1} />
                 {
                     lgDown ? (
@@ -61,8 +64,9 @@ export default function Header() {
                         <>
                             <ButtonStyled
                                 color='inherit'
-                                variant='text'
                                 href='/'
+                                variant='text'
+                                LinkComponent={Link}
                             >
                                 Home
                             </ButtonStyled>
@@ -70,6 +74,7 @@ export default function Header() {
                                 color='inherit'
                                 variant='text'
                                 href='/about'
+                                LinkComponent={Link}
                             >
                                 About
                             </ButtonStyled>
@@ -77,13 +82,16 @@ export default function Header() {
                                 color='inherit'
                                 variant='text'
                                 href='/blog'
+                                LinkComponent={Link}
                             >
                                 Blog
                             </ButtonStyled>
                             <ButtonStyled
                                 color='inherit'
-                                variant='text'
                                 href='/contact'
+                                variant='text'
+                                sx={{ marginRight: 2 }}
+                                LinkComponent={Link}
                             >
                                 Contact
                             </ButtonStyled>
@@ -91,6 +99,7 @@ export default function Header() {
                                 color='primary'
                                 variant='contained'
                                 href='/login'
+                                LinkComponent={Link}
                             >
                                 Login
                             </Button>

@@ -3,11 +3,11 @@ import HomePage from './Home'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Home',
-    description: 'Home page description',
-    keywords: ['Home', 'Next.js'],
+  title: 'Home',
+  description: 'Home page description',
+  keywords: ['Home', 'Next.js'],
 }
-  
+
 type Props = {}
 
 export default function Home({}: Props) {
